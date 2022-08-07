@@ -84,6 +84,8 @@ async def to_code(config):
     else:
         cg.add(var.set_optimistic(config[CONF_OPTIMISTIC]))
         cg.add(var.set_initial_value(config[CONF_INITIAL_VALUE]))
+        cg.add(var.set_min_value(config[CONF_MIN_VALUE]))
+        cg.add(var.set_max_value(config[CONF_MAX_VALUE]))
         if CONF_RESTORE_VALUE in config:
             cg.add(var.set_restore_value(config[CONF_RESTORE_VALUE]))
 
