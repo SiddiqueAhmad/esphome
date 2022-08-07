@@ -49,6 +49,8 @@ void TemplateNumber::control(float value) {
 void TemplateNumber::dump_config() {
   LOG_NUMBER("", "Template Number", this);
   ESP_LOGCONFIG(TAG, "  Optimistic: %s", YESNO(this->optimistic_));
+  ESP_LOGCONFIG(TAG, "  Min Value: %s", YESNO(this->min_value_));
+  ESP_LOGCONFIG(TAG, "  Max Value: %s", YESNO(this->max_value_));
   LOG_UPDATE_INTERVAL(this);
 }
 
